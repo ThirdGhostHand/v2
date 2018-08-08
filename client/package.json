@@ -1,0 +1,53 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:5000"
+    },
+    "/auth/local": {
+      "target": "http://localhost:5000"
+    },
+    "/auth/signup": {
+      "target": "http://localhost:5000"
+    },
+    "/auth/merchant": {
+      "target": "http://localhost:5000"
+    },
+    "/auth/merchantSignup": {
+      "target": "http://localhost:5000"
+    },
+    "/store/addItem": {
+      "target": "http://localhost:5000"
+    },
+    "/merchant/inventory": {
+      "target": "http://localhost:5000"
+    },
+    "/client/store": {
+      "target": "http://localhost:5000"
+    },
+    "/api/cart": {
+      "target": "http://localhost:5000"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "materialize-css": "^0.99.0",
+    "react": "^16.0.0-alpha.13",
+    "react-dom": "^16.0.0-alpha.13",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "react-scripts": "1.0.10",
+    "react-stripe-checkout": "^2.4.0",
+    "redux": "^3.7.1",
+    "redux-form": "^7.0.1",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
