@@ -71,16 +71,12 @@ export const signout = () => {
 };
 
 export const addItem = (formProps, callback) => async dispatch => {
-  try {
+
       const res = await axios.post(
         'store/addItem',
         formProps
       );
-      dispatch({ type: ADD_ITEM, payload: res.data });
       callback();
-  } catch (e) {
-    dispatch({ type: ADD_ITEM_ERROR, payload: 'Add item failed' });
-    }
   };
 
 export const handleToken = token => async dispatch => {

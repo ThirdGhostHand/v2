@@ -7,9 +7,9 @@ import * as actions from '../../actions';
 class AddItem extends Component{
     onSubmit = formProps => {
         this.props.addItem(formProps, () => {
-          this.props.history.push('/addItem');
+          this.props.history.push('/merchantStore');
         });
-      };
+      }
     
       render() {
         const { handleSubmit } = this.props;
@@ -52,7 +52,6 @@ class AddItem extends Component{
                 autoComplete="none"
               />
             </fieldset>
-            <div>{this.props.errorMessage}</div>
             <button>Add Item to inentory</button>
           </form>
         );
@@ -60,7 +59,7 @@ class AddItem extends Component{
     }
     
     function mapStateToProps(state) {
-      return {errorMessage: state.store.errorMessage};
+      return <p>Oops</p>;
     }
     
     export default compose(

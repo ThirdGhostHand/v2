@@ -10,9 +10,6 @@ class Header extends Component {
     console.log(this.props.auth)
     this.props.getCart();
   }
-  componentDidUpdate(){
-    console.log("auth equal:", this.props.auth)
-  }
 
   renderContent() {
     switch (this.props.auth) {
@@ -30,9 +27,6 @@ class Header extends Component {
             <li key="1"><Link to="/ClientStore">Shop</Link></li>,
             <li key="2"><Payments /></li>,
             <li key="3" style={{ margin: '0 10px' }}>
-              Credits: {this.props.auth.credits}
-            </li>,
-            <li key="4" style={{ margin: '0 10px' }}>
               <Link to="/cart">Cart</Link>
               {(this.props.totalQty > 0)?( // if # of items in cart is > 0
                 <p>{this.props.totalQty}</p>):('')}
@@ -44,8 +38,7 @@ class Header extends Component {
           return (
             [
               <li key="1"><Link to="/merchantStore">Manage Shop</Link></li>,
-              <li key="2"><Payments /></li>,
-              <li key="3"><a href="/api/logout">Logout</a></li>
+              <li key="2"><a href="/api/logout">Logout</a></li>
             ]
           );
         }

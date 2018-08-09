@@ -5,13 +5,14 @@ import { fetchInventory } from '../../actions';
 
 class MerchantInventory extends Component{
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.fetchInventory();
     }
 
     renderInventory(){
         if(this.props.inventory){
-            return this.props.inventory.reverse().map(item => {
+            console.log(this.props.inventory)
+            return this.props.inventory.map(item => {
                 return (    
                 <div className="card darken-1" key={item._id}>
                     <div className="card-content">

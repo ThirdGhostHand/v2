@@ -34,6 +34,7 @@ module.exports = app => {
     app.post('/api/cart', (req, res) => {
         var cart = req.body;
         req.session.cart = cart;
+        console.log(req.session.cart)
         req.session.save(function(err){
           if(err){
             throw err;
