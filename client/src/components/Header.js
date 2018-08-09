@@ -7,7 +7,11 @@ import { getCart } from '../actions';
 
 class Header extends Component {
   componentDidMount(){
+    console.log(this.props.auth)
     this.props.getCart();
+  }
+  componentDidUpdate(){
+    console.log("auth equal:", this.props.auth)
   }
 
   renderContent() {
@@ -22,7 +26,6 @@ class Header extends Component {
         </div>;
       default:
         if(this.props.auth.type === "user"){
-          console.log(this.props.cart)
           return [
             <li key="1"><Link to="/ClientStore">Shop</Link></li>,
             <li key="2"><Payments /></li>,
@@ -54,7 +57,7 @@ class Header extends Component {
       <nav>
         <div className="nav-wrapper">
           <Link
-            to={this.props.auth ? '/surveys' : '/'}
+            to={this.props.auth ? '/' : '/'}
             className="left brand-logo"
           >
             Korea Town

@@ -45,7 +45,6 @@ module.exports = app => {
       app.get('/api/cart', (req, res) => {
         if(typeof req.session.cart !== 'undefined'){
           res.send(req.session.cart);
-          console.log(res.req.session.cart)
         }
       });
 }    
