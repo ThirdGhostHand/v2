@@ -4,31 +4,31 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/auth/local": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/auth/signup": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/auth/merchant": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/auth/merchantSignup": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/store/addItem": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/merchant/inventory": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/client/store": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     },
     "/api/cart": {
-      "target": "https://ancient-inlet-97491.herokuapp.com/"
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {
